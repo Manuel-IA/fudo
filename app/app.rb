@@ -5,10 +5,14 @@ require_relative './controllers/product_controller'
 class App
   SECRET_KEY = 'my$ecretK3y'
 
+  def initialize
+    @product_controller = ProductController.new
+    @product_controller.process_queue
+  end
+
   def call(env)
     req = Rack::Request.new(env)
     res = Rack::Response.new
-    product_controller = ProductController.new
 
     case req.path_info
     when '/'
@@ -20,7 +24,7 @@ class App
     when '/products'
       user_data = authenticate_token(req, res)
       if user_data
-        req.post? ? product_controller.create(req, res, user_data) : product_controller.index(req, res, user_data)
+        req.post? ? @product_controller.create(req, res, user_data) : @product_controller.index(req, res, user_data)
       else
         res['Content-Type'] = 'application/json'
         res.write({ error: "Unauthorized" }.to_json)
@@ -30,11 +34,11 @@ class App
       user_data = authenticate_token(req, res)
       if user_data
         if req.get?
-          product_controller.show(req, res, user_data)
+          @product_controller.show(req, res, user_data)
         elsif req.put?
-          product_controller.update(req, res, user_data)
+          @product_controller.update(req, res, user_data)
         elsif req.delete?
-          product_controller.delete(req, res, user_data)
+          @product_controller.delete(req, res, user_data)
         else
           res['Content-Type'] = 'application/json'
           res.write({ error: "Method not allowed" }.to_json)
