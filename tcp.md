@@ -1,0 +1,1 @@
+TCP es un protocolo primordial de Internet que asegura la entrega ordenada y fiable de datos entre servidores y redes. Se encarga del control de flujo, retransmisiones y congestión, y asegura que la información llegue integra y en secuencia. Es esencial para servicios como HTTP, SMTP y FTP.
