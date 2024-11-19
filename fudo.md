@@ -1,0 +1,3 @@
+Fudo es un software encargado de la gestión de Restaurantes, bares y cafés. Posee múltiples opciones para un manejo y administración plena, desde gestión de inventario, gastos, proveedores y administración fiscal hasta integración con aplicaciones con delivery y tienda online, para que no tengas que preocuparte de más.
+
+Fudo surgió en Argentina y hoy ya tiene una fuerte presencia en Chile, México, Colombia y Brasil; aportando soluciones a más de 25,000 restaurantes. Fudo cuenta con un equipo multicultural y en constante crecimiento que permite entregar un software de alta calidad que responde a las múltiples necesidades de los clientes.
