@@ -1,0 +1,1 @@
+HTTP es un protocolo en la capa de aplicación que define cómo los clientes y servidores web se comunican. Utiliza métodos como GET, POST, PUT y DELETE para agregar, presentar o modificar información. Este protocolo es necesario para una comunicación segura, eficiente y estandarizada en internet.
